@@ -1,0 +1,37 @@
+.root {
+  text-align: center;
+}
+
+.clockWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dragOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  cursor: grab;
+  touch-action: none;
+}
+
+.label {
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.labelLarge {
+  font-size: 14px;
+}
+
+.labelSmall {
+  font-size: 11px;
+}
+
+.labelInteractive {
+  color: #2563eb;
+}
+
+.labelStatic {
+  color: #475569;
+}

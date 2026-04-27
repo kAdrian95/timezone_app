@@ -1,0 +1,44 @@
+.wrapper {
+  --zone-fill-active: #2563eb;
+  --zone-fill-inactive: #cbd5e1;
+  --zone-fill-active-hover: #1d4ed8;
+  --zone-fill-inactive-hover: #94a3b8;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  background: #f1f5f9;
+}
+
+.map :global(svg) {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #f1f5f9;
+}
+
+.zone :global(path) {
+  fill: var(--zone-fill-inactive);
+  stroke: #f1f5f9;
+  stroke-width: 0.3;
+  outline: none;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.zone:hover :global(path) {
+  fill: var(--zone-fill-inactive-hover);
+}
+
+.zone[data-active="true"] :global(path) {
+  fill: var(--zone-fill-active);
+}
+
+.zone[data-active="true"]:hover :global(path) {
+  fill: var(--zone-fill-active-hover);
+}
