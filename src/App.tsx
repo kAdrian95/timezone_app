@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnalogClockLib as AnalogClock } from "./components/AnalogClockLib";
+import { AnalogClock } from "./components/AnalogClock";
 import { TimezoneMap } from "./components/TimezoneMap";
 
 import { useTimezoneData } from "./hooks/useTimezoneData";
@@ -26,7 +26,6 @@ export default function App() {
 
   return (
     <div className={styles.root}>
-      <h1 className={styles.title}>World Clock</h1>
       <p className={styles.subtitle}>
         Przeciągnij wskazówkę godzinową lub kliknij strefę na mapie
       </p>

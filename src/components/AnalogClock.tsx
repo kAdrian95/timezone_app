@@ -1,7 +1,7 @@
 import { useRef, type PointerEvent } from "react";
 import Clock from "react-clock";
 import "react-clock/dist/Clock.css";
-import styles from "./AnalogClockLib.module.css";
+import styles from "./AnalogClock.module.css";
 import { pointerToHourFrac } from "../utils/dragMath";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   onHourDrag?: (hourFrac: number) => void;
 }
 
-export function AnalogClockLib({ time, size, label, onHourDrag }: Props) {
+export function AnalogClock({ time, size, label, onHourDrag }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const interactive = Boolean(onHourDrag);
 
