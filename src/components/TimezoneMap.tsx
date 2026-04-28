@@ -22,8 +22,7 @@ export function TimezoneMap({ features, selectedOffset, onZoneClick }: Props) {
             {({ geographies }) =>
               geographies.map((geo) => {
                 const { utcOffsetHours } = geo.properties;
-                const active =
-                  Math.abs(utcOffsetHours - selectedOffset) < 0.001;
+                const active = utcOffsetHours === selectedOffset;
 
                 return (
                   <g
